@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Symfony\Component\CssSelector\XPath\Extension\FunctionExtension;
+use app\Models\Proveedor;
 
 class Productos extends Model
 {
@@ -18,4 +20,8 @@ class Productos extends Model
         'idcategoria',
         'idproveedor',
     ];
+
+    public function provedor(){
+        //return $this->hasOne::Proveedor;
+    }
 }
