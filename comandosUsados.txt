@@ -3,3 +3,7 @@ php artisan make:model Categorias -mfscr
 php artisan make:model Productos -mfscr
 
 php artisan migrate
+
+php artisan migrate:refresh --seeder
+
+php artisan db:seed
