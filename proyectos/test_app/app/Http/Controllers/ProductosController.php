@@ -12,7 +12,9 @@ class ProductosController extends Controller
      */
     public function index()
     {
-        return view('inicio', ['title'=>'Inicio']); 
+        $title = 'Productos';
+        $productos = Productos::all();
+        return view('inicio', compact('title', 'productos')); 
     }
 
     /**

@@ -8,6 +8,7 @@ use App\Models\Proveedor;
 
 class ProveedorSeeder extends Seeder
 {
+    use WithoutModelEvents;
     /**
      * Run the database seeds.
      */

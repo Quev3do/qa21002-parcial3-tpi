@@ -8,6 +8,7 @@ use App\Models\Productos;
 
 class ProductosSeeder extends Seeder
 {
+    use WithoutModelEvents;
     /**
      * Run the database seeds.
      */
