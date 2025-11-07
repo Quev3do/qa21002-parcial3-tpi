@@ -12,7 +12,7 @@ class ProductosController extends Controller
      */
     public function index()
     {
-        return 
+        return view('inicio', ['title'=>'Inicio']); 
     }
 
     /**
