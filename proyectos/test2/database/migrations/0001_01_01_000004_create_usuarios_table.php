@@ -15,8 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('edad');
+            $table->string('username');
+            $table->string('email');
+            $table->string('password');
             $table->unsignedBigInteger('idUniversidads');
             $table->foreign('idUniversidads')->references('id')->on('universidads');
+            $table->rememberToken();
             //$table->foreignId('idUniversidads')->constrained();
             $table->timestamps();
         });

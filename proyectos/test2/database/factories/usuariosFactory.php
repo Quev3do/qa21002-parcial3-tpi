@@ -27,6 +27,10 @@ class usuariosFactory extends Factory
         return [
             'name' => fake()->name(),
             'edad' => fake()->numberBetween(18,26),
+            'email' => fake()->email(),
+            'username' => fake()->username(),
+            'password' => Hash::make('1234'),
+            //'password' => fake()->numberBetween(0,9999),
             'idUniversidads' => fake()->numberBetween(1,3),
         ];
     }

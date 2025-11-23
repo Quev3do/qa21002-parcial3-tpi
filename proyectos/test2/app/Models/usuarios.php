@@ -4,11 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Symfony\Component\CssSelector\XPath\Extension\FunctionExtension;
 use Illuminate\Notifications\Notifiable;
 use App\Models\universidad;
 
-class usuarios extends Model
+class usuarios extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
@@ -24,6 +25,9 @@ class usuarios extends Model
     protected $fillable = [
         'name',
         'edad',
+        'password',
+        'email',
+        'username',
         'idUniversidads',
     ];
 
